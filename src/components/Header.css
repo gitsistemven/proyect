@@ -1,0 +1,222 @@
+/* src/components/Header.css (Diseño Estricto y Corregido) */
+
+/* -------------------------------------- */
+/* 1. Estilos Base (Escritorio y Fijo) */
+/* -------------------------------------- */
+
+.site-header {
+    /* 💥 Corregido: Fijo arriba, fondo blanco y sombra */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffffff; /* Blanco directo */
+    color: #333333; /* Texto oscuro directo */
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-header.hidden-on-scroll {
+    display: none; /* Ocultar al hacer scroll */
+}
+
+.header-inner {
+    /* Contenedor centralizado y flexible */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+    width: 100%;
+}
+
+/* -------------------------------------- */
+/* 2. Brand y Contacto */
+/* -------------------------------------- */
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* No se encoge */
+}
+
+.logo {
+    width: 100px;
+    height: auto; 
+    display: block;
+    margin-right: 15px; /* Espacio entre logo y contacto */
+}
+
+.contact-link {
+    font-weight: 600;
+    color: #d9534f; /* Rojo de acento */
+    text-decoration: none;
+    white-space: nowrap; /* Evita que el texto se rompa */
+    font-size: 0.9em;
+}
+
+/* -------------------------------------- */
+/* 3. Buscador (Border fijo) */
+/* -------------------------------------- */
+
+.search-bar-container {
+    flex-grow: 1; 
+    max-width: 500px;
+    margin: 0 40px; 
+    display: flex;
+    align-items: center;
+    /* 💥 Corregido: Borde y color directo */
+    background: white; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; /* Borde gris */
+    transition: border 0.3s;
+    height: 40px; /* Altura definida para evitar deformación */
+}
+
+.search-bar-container:hover {
+    border: 1px solid #d9534f; /* Rojo al pasar el ratón */
+}
+
+.search-input {
+    flex-grow: 1; 
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    color: #333; 
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #999; 
+}
+
+.search-btn { 
+    color: #333; 
+    padding: 10px 15px; 
+    background: transparent; 
+    border: none;
+    cursor: pointer;
+}
+
+/* -------------------------------------- */
+/* 4. Acciones (Íconos, Tema/Idioma) */
+/* -------------------------------------- */
+
+.header-actions { 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+    /* 💥 CORRECCIÓN: Evita que el contenedor de acciones se reduzca */
+    flex-shrink: 0;
+}
+
+.action-icon-link {
+   color: #333; 
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    display: flex; 
+    flex-shrink: 0; 
+    transition: color 0.2s;
+}
+
+.action-icon-link:hover {
+    color: #d9534f; 
+}
+
+.cart-count { 
+    position: absolute; 
+    top: -5px; 
+    right: -5px; 
+    background: #d9534f; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    font-size: 10px; 
+    font-weight: 700; 
+    line-height: 1;
+}
+
+/* El botón hamburguesa debe estar oculto por defecto */
+.hamburger {
+    display: none; 
+}
+
+/* -------------------------------------- */
+/* 5. Estilos Móviles (Media Query) */
+/* -------------------------------------- */
+
+@media (max-width: 900px) {
+    /* 💥 Ocultar elementos que causan deformación en móviles */
+    .search-bar-container,
+    .contact-link,
+    .action-icon-link, /* Ocultamos los íconos de escritorio */
+    .theme-lang-controls { /* Ocultamos el ThemeToggle de la línea principal */
+        display: none; 
+    }
+    
+    .header-inner {
+        /* Asegurar que el contenido móvil se alinea bien */
+        justify-content: space-between; 
+        padding: 0 15px;
+    }
+
+    .hamburger {
+        /* Mostrar el botón hamburguesa */
+        display: block;
+        color: #333;
+        font-size: 28px;
+    }
+    
+    /* 💥 Menú Desplegable (se activa con .site-header.is-open) */
+    .site-header.is-open .header-actions {
+        /* Restablecer la visualización de los elementos del menú */
+        display: block; 
+        position: absolute;
+        top: 80px; 
+        right: 0;
+        width: 100%; 
+        max-width: 280px; /* Ancho cómodo para el menú lateral */
+        background: #ffffff; 
+        box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        padding: 0;
+    }
+
+    /* 💥 Estilos para los links del menú móvil */
+    .mobile-nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .mobile-menu-link {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .contact-highlight {
+        font-weight: bold;
+        color: #d9534f;
+        background-color: #fcebeb; 
+    }
+    
+    /* Mostrar ThemeToggle como parte del menú desplegable */
+    .theme-lang-controls {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0;
+        border-top: 1px solid #eee;
+    }
+}

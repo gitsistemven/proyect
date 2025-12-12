@@ -1,0 +1,40 @@
+/* src/components/StaticBanners.css */
+
+.static-banners-section {
+    padding-bottom: 30px;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.banners-grid {
+    display: grid;
+    /* 3 columnas de igual ancho */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    
+}
+
+.banner-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.banner-item:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .banners-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+}

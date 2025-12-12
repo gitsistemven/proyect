@@ -1,0 +1,79 @@
+/* src/components/StaticPromoBanners.css */
+
+.promo-banners-section {
+    
+    padding: 30px 0;
+}
+
+.banners-container-grid {
+    display: grid;
+    /* 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding-top: 30px;
+}
+.pro-home-text-block {
+    margin-bottom: 20px;
+}
+.pro-home-text-block h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #d66c6c;
+    margin-bottom: 10px;
+    padding-left:50% ;
+}
+.pro-home-text-block p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+    padding-left:25% ;
+}
+.promo-card {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+    transform: scale(1.02);
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.8); /* Oscurece la imagen para que el texto resalte */
+    transition: filter 0.3s;
+}
+
+.promo-card:hover img {
+    filter: brightness(0.9);
+}
+
+/* --- Texto Superpuesto (Overlay) --- */
+.promo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.promo-title {
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.promo-subtitle {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}

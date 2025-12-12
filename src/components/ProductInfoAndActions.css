@@ -1,0 +1,120 @@
+.product-info-actions {
+    padding: 0%;/* Estilos para la columna de información */
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-brand {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Bloque de Precio */
+.price-block {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+.old-price {
+    font-size: 18px;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 15px;
+    display: block; /* Muestra en su propia línea si es necesario */
+}
+.current-price {
+    font-size: 36px;
+    font-weight: 900;
+    color: #d9534f;
+    display: block;
+}
+
+/* Variantes */
+.variants-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.variant-select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.variants-section label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Acciones */
+.actions-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.quantity-input {
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn-add-to-cart {
+    flex-grow: 1;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+.btn-add-to-cart:hover:not(:disabled) {
+    background-color: #a94442;
+}
+.btn-wishlist {
+    background-color: #f0f0f0;
+    color: #d9534f;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-wishlist:hover {
+    background-color: #ddd;
+}
+
+/* Stock y Envío */
+.stock-delivery-info {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.in-stock {
+    color: green;
+    font-weight: 600;
+}
+.out-of-stock {
+    color: red;
+    font-weight: 600;
+}
+.delivery-info {
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}

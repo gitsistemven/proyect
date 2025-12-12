@@ -1,0 +1,65 @@
+/* src/components/ThemeToggle.css (Asegura la alineación y el diseño) */
+
+.theme-lang-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el selector de idioma y el botón de tema */
+    flex-shrink: 0; /* Evita que este grupo se comprima */
+}
+
+/* Contenedor de ES | EN (Borde y Agrupación) */
+.language-switcher {
+    display: flex; /* Flex interno para alinear ES, el separador y EN */
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #333; 
+}
+
+.language-switcher button.active {
+    background-color: #d9534f; /* Rojo de acento */
+    color: white;
+}
+
+.language-switcher .separator {
+    color: #999;
+    font-size: 0.8em;
+}
+
+/* Botón de Tema (🌙 / ☀️) */
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    color: #333; 
+}
+
+/* 💥 IMPORTANTE: Asegúrate que cuando el tema cambie, los colores se ajusten */
+/* Esto requiere que tu ThemeContext.tsx aplique una clase (.theme-dark) al <body> o al <html> */
+body.theme-dark .language-switcher button {
+    color: #e0e0e0; /* Texto claro en modo oscuro */
+}
+
+body.theme-dark .language-switcher button.active {
+    background-color: #d9534f; 
+    color: white;
+}
+
+body.theme-dark .theme-toggle-btn {
+    border: 1px solid #444; 
+    color: #e0e0e0;
+}

@@ -1,0 +1,51 @@
+/* src/components/InfoBannersAndText.css */
+
+.info-banners-section {
+    padding: 40px 0 60px;
+    background-color: #e95d5d; /* Fondo ligero para la sección */
+}
+
+/* --- PARTE 1: Banners de Servicio (3 columnas) --- */
+.service-banners-grid {
+    display: grid;
+    /* 3 columnas de igual ancho */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    background:#e95d5d;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-icon {
+    color: #f3f3f3; /* Color rojo de acento */
+    margin-bottom: 15px;
+    border-radius: 30%;
+    padding: 50px;
+    background-color: #bb9a98e5;
+}
+
+.service-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 5px;
+    color: #fdfdfd;
+}
+
+.service-description {
+    font-size: 14px;
+    color: #fffbfb;
+    margin: 0;
+}
+
+
+
+.service-icon:hover {
+    background-color: #c29d9b;
+}

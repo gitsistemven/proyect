@@ -1,0 +1,134 @@
+.product-carousel {
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+}
+
+.product-carousel {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* CONTENEDOR */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.product-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* PISTA DE DESPLAZAMIENTO */
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s ease-in-out;
+  width: 100%;
+}
+
+/* UNA PÁGINA */
+.carousel-page {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* TARJETA DE PRODUCTO */
+.product-card {
+  width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGEN */
+.product-image img {
+  width: 450px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* INFO */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #111010;
+}
+
+.product-name {
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  display: block;
+}
+.product-info:hover{
+    color: #e65757;
+}
+/* PRECIO */
+.product-info .price {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: #d14343;
+  color: #f3f3f3; /* color similar al sitio */
+  padding: 4px 10px;
+  border-radius: 6px;
+   text-align: center;
+  margin-right: 1px;
+}
+
+
+.price-box .price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* BOTONES */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-btn.left { left: 10px; }
+.nav-btn.right { right: 10px; }
+
+/* RESPONSIVE */
+@media (max-width: 780px) {
+  .carousel-page {
+    flex-direction: column;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-image img {
+    width: 100%;
+    max-width: 280px;
+  }
+  .product-item {
+    flex-direction: column; /* imagen arriba */
+    text-align: center;
+  }
+}
+
+

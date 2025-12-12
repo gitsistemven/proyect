@@ -1,0 +1,89 @@
+/* src/HeroSection.css */
+
+/* src/HeroSection.css */
+
+.hero { 
+    position:relative; 
+    height:400px; 
+    overflow:hidden; 
+    z-index: 1; 
+    margin-bottom: 0; /* Asegúrate de que no haya margen inferior */
+    padding-bottom: 0;
+}
+
+.hero-slide { 
+    position:absolute; 
+    inset:0; 
+    background-size:cover; 
+    background-position:center; 
+    opacity:0; 
+    transition:opacity .6s ease; 
+    z-index: 2; 
+}
+
+.hero-slide.active { 
+    opacity:1; 
+    z-index: 3; 
+}
+.hero::after {
+    z-index: 4; 
+}
+
+.hero-controls {
+
+    z-index: 10; 
+}
+
+.hero-dots { 
+    
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display:flex; 
+    justify-content:center; 
+    gap:8px; 
+    z-index: 15; 
+    pointer-events: auto; 
+}
+
+.dot { 
+    width:1px; 
+    height:3px; 
+    border-radius:60%; 
+    background:rgba(155, 79, 79, 0.973); 
+    border:2px solid beige; 
+    cursor:pointer;
+}
+.dot.active { 
+    background:white; 
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 12;
+    pointer-events: auto; 
+    background: rgba(0, 0, 0, 0.4); 
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.nav-arrow.left {
+    left: 20px;
+    border-radius: 0 5px 5px 0; 
+}
+
+.nav-arrow.right {
+    right: 20px;
+    border-radius: 5px 0 0 5px; 
+}

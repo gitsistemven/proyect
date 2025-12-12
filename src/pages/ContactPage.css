@@ -1,0 +1,99 @@
+/* src/pages/ContactPage.css (Versión con Colores Fijos) */
+
+.contact-page-main {
+    padding: 40px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Fondo del Contenedor Principal (Gris claro, similar al fondo de la página) */
+    background: #f8f8f8; /* Color fijo para que no se mezcle con el fondo del body (o usa white) */
+}
+
+.contact-title {
+    color: #d9534f; /* Rojo de acento */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    text-align: center;
+    /* 💥 CORREGIDO: var(--color-text-secondary) -> Gris oscuro */
+    color: #666666; 
+    margin-bottom: 30px;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    /* Fondo del Formulario (Rojo de acento, ya estaba bien) */
+    background-color:#d9534f;
+    padding: 30px;
+    border-radius: 8px;
+    /* 💥 CORREGIDO: var(--color-shadow) -> Sombra ligera */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    /* 💥 CORREGIDO: var(--color-text-primary) -> Blanco (Para contrastar con el fondo rojo del form) */
+    color: #ffffff; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    /* 💥 CORREGIDO: var(--color-border) -> Borde gris claro */
+    border: 1px solid #dddddd; 
+    border-radius: 4px;
+    /* 💥 CORREGIDO: var(--color-background-primary) -> Fondo blanco del input */
+    background-color: #ffffff; 
+    /* 💥 CORREGIDO: var(--color-text-primary) -> Texto oscuro del input */
+    color: #333333; 
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #d9534f; /* Rojo de acento al enfocar */
+    outline: none;
+}
+
+/* ... (El resto de estilos de errores y checkbox se mantienen) ... */
+
+.submit-button {
+    background-color: #d9534f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #c94c45;
+}
+
+/* Media Query para una columna en móviles */
+@media (max-width: 768px) {
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .span-2 {
+        grid-column: span 1;
+    }
+}

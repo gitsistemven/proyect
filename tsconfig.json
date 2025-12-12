@@ -1,0 +1,28 @@
+// tsconfig.json - Contenido Correcto
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Opciones clave de compilación y resolución de módulos */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    
+    // 🔥 ESTO ES LO MÁS IMPORTANTE PARA RESOLVER TUS ERRORES
+    "jsx": "react-jsx", 
+
+    /* Opciones de Tipado Estricto (Recomendado) */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

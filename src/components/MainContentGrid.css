@@ -1,0 +1,32 @@
+/* src/components/MainContentGrid.css */
+
+.main-content-grid {
+    display: grid;
+    /* Definimos dos columnas: una estrecha (300px) y la otra toma el resto (1fr) */
+    grid-template-columns: 300px 1fr; 
+    gap: 30px; /* Espacio entre las dos columnas */
+    width: 50%;
+    margin-bottom: 0%;
+}
+
+/* En el diseño de Proaccesorios, los 3 banners se apilan verticalmente 
+   en el área estrecha */
+.static-banners-wrap .banners-grid {
+    /* Desactivar el grid de 3 columnas que definimos antes */
+    grid-template-columns: 1fr; /* Una sola columna vertical */
+
+}
+
+/* Asegurar que las imágenes ocupen todo el ancho disponible */
+.grid-item img {
+    width: 100%;
+}
+
+/* --- Responsive para dispositivos pequeños --- */
+@media (max-width: 1000px) {
+    .main-content-grid {
+        /* En pantallas medianas y pequeñas, volvemos a una sola columna */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}

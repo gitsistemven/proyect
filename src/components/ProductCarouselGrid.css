@@ -1,0 +1,134 @@
+/* src/components/ProductCarouselGrid.css */
+
+.product-grid-section {
+    padding: 30px 0;
+    /* 💥 Corrección: Quitamos el background y padding/margin conflictivo aquí */
+    /* Dejamos que el contenedor global maneje eso */
+}
+.product-grid-section h2 {
+    /* 💥 Ajuste de estilo: Aplicamos el fondo rojo al título, no a la sección */
+    background-color: #d9534f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.carousel-grid-wrapper {
+    position: relative;
+    overflow: hidden; 
+}
+
+.grid-product-list {
+    display: flex;
+    gap: 15px; 
+    width: 100%; 
+    transition: transform 0.4s ease-out; 
+}
+
+/* --- Estilo de la Tarjeta de Producto (4 en fila) --- */
+.grid-product-card {
+    background: #fff; /* Fondo blanco de la tarjeta */
+    border: 1px solid transparent; 
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px; 
+    
+    /* 💥 CLAVE: Muestra 4 ítems a la vez */
+    flex: 0 0 calc(25% - 11.25px); /* Cálculo para 4 ítems con gap de 15px */
+    max-width: calc(25% - 11.25px);
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+/* Efecto Hover (Borde y elevación) */
+.grid-product-card:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgb(65, 63, 63); /* Sombra suave */
+}
+
+.grid-product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 15px; 
+}
+
+.grid-product-info {
+    text-align: center;
+    padding: 0 10px 15px;
+    min-height: 80px; 
+}
+
+.grid-product-name {
+    display: block;
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.grid-product-price {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000; 
+}
+
+/* --- Botón de Carrito "Comprar" (con icono) --- */
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #e43307; 
+    border: 1px solid black; 
+    color: white;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #c9302c; 
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+/* --- Controles de Navegación (Flechas) --- */
+.grid-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* 💥 Aseguramos visibilidad */
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s;
+}
+.grid-nav-arrow.left { left: 10px; }
+.grid-nav-arrow.right { right: 10px; }
+.grid-nav-arrow:hover { background: #eee; }
+.grid-nav-arrow:disabled { opacity: 0.3; cursor: not-allowed; }

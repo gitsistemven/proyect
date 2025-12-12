@@ -1,0 +1,122 @@
+/* src/components/FinalServiceAndNewsletter.css */
+
+.final-service-newsletter-section {
+    width: 100%;
+}
+
+/* --- 1. SECCIÓN SUPERIOR (Banners de Servicio) --- */
+.top-service-row {
+    background-color: #df5a56; /* Fondo rojo claro */
+    padding-top: 50px;
+    color: white;
+}
+
+.service-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.service-banner-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.service-icon-circle {
+    /* 💥 Círculo grande de fondo claro */
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Sombras para dar un efecto 3D */
+    box-shadow: 0 5px 15px rgba(223, 219, 219, 0.2);
+}
+
+.service-icon {
+    /* El icono en sí es blanco por heredar el color del .top-service-row */
+    color: white; 
+    opacity: 0.8;
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.service-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 15px;
+}
+
+.ver-mas-btn {
+    background: #a94442; /* Rojo oscuro para el botón */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ver-mas-btn:hover {
+    background: #903a38;
+}
+
+/* --- 2. SECCIÓN INFERIOR (Boletín por Email) --- */
+
+
+.newsletter-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.newsletter-label {
+    font-size: 18px;
+    font-weight: 600;
+    flex-shrink: 0; /* Evita que el texto se comprima */
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid white;
+    
+}
+
+.newsletter-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+.newsletter-submit-btn {
+    background-color: #a94442; /* Botón negro/gris oscuro */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.newsletter-submit-btn:hover {
+    background-color: black;
+}

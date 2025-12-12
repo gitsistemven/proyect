@@ -1,0 +1,25 @@
+.product-detail-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.product-detail-grid {
+    display: grid;
+    /* Dos columnas: 40% para imagen, 60% para info */
+    grid-template-columns: 2fr 3fr; 
+    gap: 50px;
+}
+
+.product-long-description {
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.product-long-description h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #d9534f;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
